@@ -8,6 +8,7 @@ const User = require('./models/user');
 // Options here 
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(express.static('public'))
+app.use(express.static('assets'))
 app.use(bodyParser.json())
 app.set('view engine', 'ejs')
 app.use(morgan('dev'));
@@ -23,7 +24,7 @@ MongoClient.connect('mongodb://army_root:DSMjegBgSqUJcEYR@ds019996.mlab.com:1999
     {
         console.log('listening on 3000')
     })
-})
+});
 
 
 // Routes
